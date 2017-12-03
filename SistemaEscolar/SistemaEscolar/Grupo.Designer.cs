@@ -31,10 +31,10 @@
             this.button5 = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button5
@@ -72,13 +72,6 @@
             this.radioButton1.Text = "Activo";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(174, 46);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(180, 20);
-            this.textBox15.TabIndex = 16;
-            // 
             // textBox14
             // 
             this.textBox14.Location = new System.Drawing.Point(174, 9);
@@ -106,6 +99,13 @@
             this.label14.TabIndex = 13;
             this.label14.Text = "Nombre del Grupo:";
             // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(174, 46);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(180, 20);
+            this.textBox15.TabIndex = 16;
+            // 
             // Grupo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,9 +131,9 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox15;
     }
 }
