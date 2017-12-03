@@ -8,9 +8,9 @@ namespace SistemaEscolar
 {
     class CGrupo
     {
-        int intIDGrupo { get; }
-        string strNomGrupo { get; set; }
-        bool boolActivo { get; set; }
-        CCuatrimestre cuatrimestre;
+        public int intIDGrupo { get; set; }
+        public string strNomGrupo { get; set; }
+        public string strActivo { get; set; }
+        public CCuatrimestre cuatrimestre;
     }
 }

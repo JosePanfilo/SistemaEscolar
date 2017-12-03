@@ -8,7 +8,7 @@ namespace SistemaEscolar
 {
     class CMaterial
     {
-        int intIDMaterial { get; }
-        string strNomMaterial { get; set; }
+        public int intIDMaterial { get; set; }
+        public string strNomMaterial { get; set; }
     }
 }

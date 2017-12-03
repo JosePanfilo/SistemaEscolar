@@ -8,11 +8,11 @@ namespace SistemaEscolar
 {
     class CProfesor
     {
-        int intNoControl { get; set; }
-        string strNomProfesor { get; set; }
-        string strApellidoPaterno { get; set; }
-        string strApellidoMaterno { get; set; }
-        string strCorreo { get; set; }
-        int intTelefono { get; set; }
+        public int intNoControl { get; set; }
+        public string strNomProfesor { get; set; }
+        public string strApellidoPaterno { get; set; }
+        public string strApellidoMaterno { get; set; }
+        public string strCorreo { get; set; }
+        public string strTelefono { get; set; }
     }
 }

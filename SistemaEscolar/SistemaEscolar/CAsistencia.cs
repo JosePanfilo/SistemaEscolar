@@ -8,9 +8,9 @@ namespace SistemaEscolar
 {
     class CAsistencia
     {
-        int intIDAsistencia { get; set; }
-        CSesion Sesion;
-        CAlumno Alumno;
-        string strTipoAsistencia { get; set; }
+        public int intIDAsistencia { get; set; }
+        public CSesion Sesion;
+        public CAlumno Alumno;
+        public string strTipoAsistencia { get; set; }
     }
 }

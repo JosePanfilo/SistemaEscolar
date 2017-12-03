@@ -8,9 +8,9 @@ namespace SistemaEscolar
 {
     class CHorario
     {
-        int intIDHorario { get; }
-        string strHora { get; set; }
-        string strDia { get; set; }
-        CImpartirMateria ImpartirMateria;
+        public int intIDHorario { get; set; }
+        public string strHora { get; set; }
+        public string strDia { get; set; }
+        public CImpartirMateria ImpartirMateria;
     }
 }

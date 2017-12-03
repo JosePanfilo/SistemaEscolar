@@ -8,9 +8,9 @@ namespace SistemaEscolar
 {
     class CCuatrimestre
     {
-        int intIDCuatrimestre { get; set; }
-        string strPeriodo { get; set; }
-        int intAño { get; set; }
-        bool boolActivo { get; set; }
+        public int intIDCuatrimestre { get; set; }
+        public string strPeriodo { get; set; }
+        public int intAño { get; set; }
+        public string strActivo { get; set; }
     }
 }

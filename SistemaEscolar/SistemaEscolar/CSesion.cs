@@ -8,17 +8,13 @@ namespace SistemaEscolar
 {
     class CSesion
     {
-        int intIDSecion { get; }
-        string strFecha { get; set; }
-        string strHora { get; set; }
-        CGrupo Grupo;
-        CMateria Materia;
-        CMaterial Material;
-        CUbicacion Ubicacion;
-        string strTipoSesion { get; set; }
-        //bool boolClase { get; set; }
-        //bool boolPractica { get; set; }
-        //bool boolConferencia { get; set; }
-        //string strOtraSucecion { get; set; }
+        public int intIDSecion { get; set; }
+        public string strFecha { get; set; }
+        public string strHora { get; set; }
+        public CGrupo Grupo;
+        public CMateria Materia;
+        public CMaterial Material;
+        public CUbicacion Ubicacion;
+        public string strTipoSesion { get; set; }
     }
 }

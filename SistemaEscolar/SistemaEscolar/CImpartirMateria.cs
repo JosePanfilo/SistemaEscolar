@@ -8,9 +8,9 @@ namespace SistemaEscolar
 {
     class CImpartirMateria
     {
-        int intIDImpartirMateria { get; }
-        CProfesor Profesor;
-        CMateria Materia;
-        CGrupo Grupo; 
+        public int intIDImpartirMateria { get; set; }
+        public CProfesor Profesor;
+        public CMateria Materia;
+        public CGrupo Grupo; 
     }
 }

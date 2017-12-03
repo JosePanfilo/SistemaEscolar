@@ -8,12 +8,12 @@ namespace SistemaEscolar
 {
     class CAlumno
     {
-        int intMatricula { get; set; }
-        string strNomAlumno { get; set; }
-        string strApellidoPaterno { get; set; }
-        string strApellidoMaterno { get; set; }
-        string strCorreo { get; set; }
-        string strTelefono { get; set; }
-        CGrupo grupo;
+        public int intMatricula { get; set; }
+        public string strNomAlumno { get; set; }
+        public string strApellidoPaterno { get; set; }
+        public string strApellidoMaterno { get; set; }
+        public string strCorreo { get; set; }
+        public string strTelefono { get; set; }
+        public CGrupo grupo;
     }
 }

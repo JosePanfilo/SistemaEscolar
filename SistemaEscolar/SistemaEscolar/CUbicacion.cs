@@ -8,7 +8,7 @@ namespace SistemaEscolar
 {
     class CUbicacion
     {
-        int intIDUbicacion { get; }
-        string strNomUbicacion { get; set; }
+        public int intIDUbicacion { get; set; }
+        public string strNomUbicacion { get; set; }
     }
 }
