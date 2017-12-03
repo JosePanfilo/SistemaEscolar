@@ -36,6 +36,6 @@ namespace SistemaEscolar
             }
             db.CerrarConexion();
             return _Sesion;
-        }
+        } 
     }
 }
