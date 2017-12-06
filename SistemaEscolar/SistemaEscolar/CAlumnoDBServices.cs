@@ -30,11 +30,44 @@ namespace SistemaEscolar
                 Alum.strApellidoMaterno = DReader["ApellidoMaterno"].ToString();
                 Alum.strCorreo = DReader["Correo"].ToString();
                 Alum.strTelefono = DReader["Telefono"].ToString();
-                Alum.grupo.intIDGrupo = int.Parse(DReader["IDGrupo"].ToString());
+                Alum.intIDGrupo = int.Parse(DReader["IDGrupo"].ToString());
                 _Alumno.Add(Alum);
             }
             db.CerrarConexion();
             return _Alumno;
+        }
+
+        public bool GuardarNuevoAlumno(CAlumno a)
+        {
+            try
+            {
+                CDBConn db = new CDBConn();
+                SqlCommand cmd = new SqlCommand("SP_InsertAlumno", db.Conectar);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                //SE AGREGA EL PARAMETRO SIN VALOR SOLO SE DICE EL TIPO QUE ES
+                SqlParameter ParamSalida = cmd.Parameters.Add("@Matricula", System.Data.SqlDbType.Int);
+                //NO SE MANDAN DATOS A LA BASE DE DATOS, SE RECIBE ALGO
+                ParamSalida.Direction = System.Data.ParameterDirection.Output;
+
+                cmd.Parameters.AddWithValue("@Nombre", a.strNomAlumno);
+                cmd.Parameters.AddWithValue("@ApellidoPaterno", a.strApellidoPaterno);
+                cmd.Parameters.AddWithValue("@ApellidoMaterno", a.strApellidoMaterno);
+                cmd.Parameters.AddWithValue("@Correo", a.strCorreo);
+                cmd.Parameters.AddWithValue("@Telefono", a.strTelefono);
+                cmd.Parameters.AddWithValue("@IDGrupo", a.intIDGrupo);
+                //cmd.Parameters.AddWithValue("@NomGrupo", g.strNomGrupo);
+                //cmd.Parameters.AddWithValue("@Activo", g.strActivo);
+                //cmd.Parameters.AddWithValue("@IDCuatrimestre", g.intIDCuatrimestre);
+                if (cmd.ExecuteNonQuery() == 1)
+                {//ACTUALIZAR ID DEL OBJETO
+                 //P.idPostre = ParamSalida.Value; dar o mostra el id pero como metodo o constructor
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
     }
 }

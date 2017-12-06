@@ -33,20 +33,18 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.btnGuardarAlumno = new System.Windows.Forms.Button();
+            this.tbCorreoAlumno = new System.Windows.Forms.TextBox();
+            this.tbApellidoMaterno = new System.Windows.Forms.TextBox();
+            this.tbApellidoPaterno = new System.Windows.Forms.TextBox();
+            this.tbNomAlumno = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbSeleccionarGrupo = new System.Windows.Forms.ComboBox();
+            this.mtbTelefono = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -96,58 +94,45 @@
             this.button3.Text = "Examinar";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnGuardarAlumno
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(10, 213);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(122, 62);
-            this.button4.TabIndex = 46;
-            this.button4.Text = "Modificar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnGuardarAlumno.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnGuardarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarAlumno.Location = new System.Drawing.Point(10, 213);
+            this.btnGuardarAlumno.Name = "btnGuardarAlumno";
+            this.btnGuardarAlumno.Size = new System.Drawing.Size(122, 62);
+            this.btnGuardarAlumno.TabIndex = 46;
+            this.btnGuardarAlumno.Text = "Modificar";
+            this.btnGuardarAlumno.UseVisualStyleBackColor = false;
+            this.btnGuardarAlumno.Click += new System.EventHandler(this.btnGuardarAlumno_Click);
             // 
-            // textBox7
+            // tbCorreoAlumno
             // 
-            this.textBox7.Location = new System.Drawing.Point(164, 151);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(192, 20);
-            this.textBox7.TabIndex = 45;
+            this.tbCorreoAlumno.Location = new System.Drawing.Point(164, 125);
+            this.tbCorreoAlumno.Name = "tbCorreoAlumno";
+            this.tbCorreoAlumno.Size = new System.Drawing.Size(192, 20);
+            this.tbCorreoAlumno.TabIndex = 44;
             // 
-            // textBox8
+            // tbApellidoMaterno
             // 
-            this.textBox8.Location = new System.Drawing.Point(164, 125);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(192, 20);
-            this.textBox8.TabIndex = 44;
+            this.tbApellidoMaterno.Location = new System.Drawing.Point(164, 99);
+            this.tbApellidoMaterno.Name = "tbApellidoMaterno";
+            this.tbApellidoMaterno.Size = new System.Drawing.Size(192, 20);
+            this.tbApellidoMaterno.TabIndex = 43;
             // 
-            // textBox9
+            // tbApellidoPaterno
             // 
-            this.textBox9.Location = new System.Drawing.Point(164, 99);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(192, 20);
-            this.textBox9.TabIndex = 43;
+            this.tbApellidoPaterno.Location = new System.Drawing.Point(164, 73);
+            this.tbApellidoPaterno.Name = "tbApellidoPaterno";
+            this.tbApellidoPaterno.Size = new System.Drawing.Size(192, 20);
+            this.tbApellidoPaterno.TabIndex = 42;
             // 
-            // textBox10
+            // tbNomAlumno
             // 
-            this.textBox10.Location = new System.Drawing.Point(164, 73);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(192, 20);
-            this.textBox10.TabIndex = 42;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(164, 47);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(192, 20);
-            this.textBox11.TabIndex = 41;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(164, 21);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(192, 20);
-            this.textBox12.TabIndex = 40;
+            this.tbNomAlumno.Location = new System.Drawing.Point(164, 47);
+            this.tbNomAlumno.Name = "tbNomAlumno";
+            this.tbNomAlumno.Size = new System.Drawing.Size(192, 20);
+            this.tbNomAlumno.TabIndex = 41;
             // 
             // label7
             // 
@@ -204,24 +189,22 @@
             this.label11.TabIndex = 35;
             this.label11.Text = "Nombre:";
             // 
-            // label12
+            // cbSeleccionarGrupo
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(12, 21);
-            this.label12.Name = "label12";
-            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label12.Size = new System.Drawing.Size(77, 20);
-            this.label12.TabIndex = 34;
-            this.label12.Text = "Matricula:";
+            this.cbSeleccionarGrupo.FormattingEnabled = true;
+            this.cbSeleccionarGrupo.Location = new System.Drawing.Point(164, 177);
+            this.cbSeleccionarGrupo.Name = "cbSeleccionarGrupo";
+            this.cbSeleccionarGrupo.Size = new System.Drawing.Size(192, 21);
+            this.cbSeleccionarGrupo.TabIndex = 49;
             // 
-            // comboBox1
+            // mtbTelefono
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(164, 177);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(192, 21);
-            this.comboBox1.TabIndex = 49;
+            this.mtbTelefono.Location = new System.Drawing.Point(164, 153);
+            this.mtbTelefono.Mask = "9999999999";
+            this.mtbTelefono.Name = "mtbTelefono";
+            this.mtbTelefono.Size = new System.Drawing.Size(192, 20);
+            this.mtbTelefono.TabIndex = 45;
+            this.mtbTelefono.ValidatingType = typeof(int);
             // 
             // Alumno
             // 
@@ -229,24 +212,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(610, 290);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.mtbTelefono);
+            this.Controls.Add(this.cbSeleccionarGrupo);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.btnGuardarAlumno);
+            this.Controls.Add(this.tbCorreoAlumno);
+            this.Controls.Add(this.tbApellidoMaterno);
+            this.Controls.Add(this.tbApellidoPaterno);
+            this.Controls.Add(this.tbNomAlumno);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
             this.Name = "Alumno";
             this.Text = "Alumno";
+            this.Load += new System.EventHandler(this.Alumno_Load);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -259,19 +241,17 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Button btnGuardarAlumno;
+        private System.Windows.Forms.TextBox tbCorreoAlumno;
+        private System.Windows.Forms.TextBox tbApellidoMaterno;
+        private System.Windows.Forms.TextBox tbApellidoPaterno;
+        private System.Windows.Forms.TextBox tbNomAlumno;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbSeleccionarGrupo;
+        private System.Windows.Forms.MaskedTextBox mtbTelefono;
     }
 }

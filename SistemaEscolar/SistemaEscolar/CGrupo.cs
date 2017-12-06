@@ -11,6 +11,7 @@ namespace SistemaEscolar
         public int intIDGrupo { get; set; }
         public string strNomGrupo { get; set; }
         public string strActivo { get; set; }
-        public CCuatrimestre cuatrimestre;
+        //public CCuatrimestre cuatrimestre;
+        public int intIDCuatrimestre { get; set; }
     }
 }

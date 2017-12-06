@@ -33,13 +33,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework">
-      <HintPath>..\..\..\..\..\Desktop\UTN\metroframework\MetroFramework.dll</HintPath>
+      <HintPath>..\..\..\metroframework\MetroFramework.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework.Design">
-      <HintPath>..\..\..\..\..\Desktop\UTN\metroframework\MetroFramework.Design.dll</HintPath>
+      <HintPath>..\..\..\metroframework\MetroFramework.Design.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework.Fonts">
-      <HintPath>..\..\..\..\..\Desktop\UTN\metroframework\MetroFramework.Fonts.dll</HintPath>
+      <HintPath>..\..\..\metroframework\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -81,6 +81,12 @@
     <Compile Include="CProfesorDBServices.cs" />
     <Compile Include="CSesion.cs" />
     <Compile Include="CSesionDBServices.cs" />
+    <Compile Include="Cuatrimestre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cuatrimestre.Designer.cs">
+      <DependentUpon>Cuatrimestre.cs</DependentUpon>
+    </Compile>
     <Compile Include="CUbicacion.cs" />
     <Compile Include="CUbicacionDBServices.cs" />
     <Compile Include="Form1.cs">
@@ -129,6 +135,9 @@
     </Compile>
     <EmbeddedResource Include="Alumno.resx">
       <DependentUpon>Alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cuatrimestre.resx">
+      <DependentUpon>Cuatrimestre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

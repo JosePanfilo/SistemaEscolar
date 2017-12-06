@@ -28,56 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button5 = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.btnGuardarGrupo = new System.Windows.Forms.Button();
+            this.rbInactivo = new System.Windows.Forms.RadioButton();
+            this.rbActivo = new System.Windows.Forms.RadioButton();
+            this.tbNomGrupo = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.cbLlenarCuatrimestre = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // button5
+            // btnGuardarGrupo
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(240, 80);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(114, 29);
-            this.button5.TabIndex = 19;
-            this.button5.Text = "Guardar";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnGuardarGrupo.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnGuardarGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarGrupo.Location = new System.Drawing.Point(240, 80);
+            this.btnGuardarGrupo.Name = "btnGuardarGrupo";
+            this.btnGuardarGrupo.Size = new System.Drawing.Size(114, 29);
+            this.btnGuardarGrupo.TabIndex = 19;
+            this.btnGuardarGrupo.Text = "Guardar";
+            this.btnGuardarGrupo.UseVisualStyleBackColor = false;
+            this.btnGuardarGrupo.Click += new System.EventHandler(this.btnGuardarGrupo_Click);
             // 
-            // radioButton2
+            // rbInactivo
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(90, 85);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(82, 24);
-            this.radioButton2.TabIndex = 18;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Inactivo";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbInactivo.AutoSize = true;
+            this.rbInactivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbInactivo.Location = new System.Drawing.Point(90, 85);
+            this.rbInactivo.Name = "rbInactivo";
+            this.rbInactivo.Size = new System.Drawing.Size(82, 24);
+            this.rbInactivo.TabIndex = 18;
+            this.rbInactivo.Text = "Inactivo";
+            this.rbInactivo.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbActivo
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(14, 85);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(70, 24);
-            this.radioButton1.TabIndex = 17;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Activo";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbActivo.AutoSize = true;
+            this.rbActivo.Checked = true;
+            this.rbActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbActivo.Location = new System.Drawing.Point(14, 85);
+            this.rbActivo.Name = "rbActivo";
+            this.rbActivo.Size = new System.Drawing.Size(70, 24);
+            this.rbActivo.TabIndex = 17;
+            this.rbActivo.TabStop = true;
+            this.rbActivo.Text = "Activo";
+            this.rbActivo.UseVisualStyleBackColor = true;
             // 
-            // textBox14
+            // tbNomGrupo
             // 
-            this.textBox14.Location = new System.Drawing.Point(174, 9);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(180, 20);
-            this.textBox14.TabIndex = 15;
+            this.tbNomGrupo.Location = new System.Drawing.Point(174, 9);
+            this.tbNomGrupo.Name = "tbNomGrupo";
+            this.tbNomGrupo.Size = new System.Drawing.Size(180, 20);
+            this.tbNomGrupo.TabIndex = 15;
             // 
             // label16
             // 
@@ -85,9 +86,9 @@
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(10, 48);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(100, 20);
+            this.label16.Size = new System.Drawing.Size(71, 20);
             this.label16.TabIndex = 14;
-            this.label16.Text = "Cuatrimestre";
+            this.label16.Text = "Periodo: ";
             // 
             // label14
             // 
@@ -99,12 +100,13 @@
             this.label14.TabIndex = 13;
             this.label14.Text = "Nombre del Grupo:";
             // 
-            // textBox15
+            // cbLlenarCuatrimestre
             // 
-            this.textBox15.Location = new System.Drawing.Point(174, 46);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(180, 20);
-            this.textBox15.TabIndex = 16;
+            this.cbLlenarCuatrimestre.FormattingEnabled = true;
+            this.cbLlenarCuatrimestre.Location = new System.Drawing.Point(118, 47);
+            this.cbLlenarCuatrimestre.Name = "cbLlenarCuatrimestre";
+            this.cbLlenarCuatrimestre.Size = new System.Drawing.Size(142, 21);
+            this.cbLlenarCuatrimestre.TabIndex = 20;
             // 
             // Grupo
             // 
@@ -112,15 +114,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(367, 134);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.cbLlenarCuatrimestre);
+            this.Controls.Add(this.btnGuardarGrupo);
+            this.Controls.Add(this.rbInactivo);
+            this.Controls.Add(this.rbActivo);
+            this.Controls.Add(this.tbNomGrupo);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label14);
             this.Name = "Grupo";
             this.Text = "Grupo";
+            this.Load += new System.EventHandler(this.Grupo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,12 +131,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Button btnGuardarGrupo;
+        private System.Windows.Forms.RadioButton rbInactivo;
+        private System.Windows.Forms.RadioButton rbActivo;
+        private System.Windows.Forms.TextBox tbNomGrupo;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.ComboBox cbLlenarCuatrimestre;
     }
 }

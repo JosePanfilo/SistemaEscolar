@@ -28,28 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.tbNomUbicacion = new System.Windows.Forms.TextBox();
+            this.btnGuardarUbicacion = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox17
+            // tbNomUbicacion
             // 
-            this.textBox17.Location = new System.Drawing.Point(101, 11);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(218, 20);
-            this.textBox17.TabIndex = 10;
+            this.tbNomUbicacion.Location = new System.Drawing.Point(101, 11);
+            this.tbNomUbicacion.Name = "tbNomUbicacion";
+            this.tbNomUbicacion.Size = new System.Drawing.Size(218, 20);
+            this.tbNomUbicacion.TabIndex = 10;
             // 
-            // button7
+            // btnGuardarUbicacion
             // 
-            this.button7.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(12, 37);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(120, 34);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "Guardar";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnGuardarUbicacion.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnGuardarUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarUbicacion.Location = new System.Drawing.Point(12, 37);
+            this.btnGuardarUbicacion.Name = "btnGuardarUbicacion";
+            this.btnGuardarUbicacion.Size = new System.Drawing.Size(120, 34);
+            this.btnGuardarUbicacion.TabIndex = 9;
+            this.btnGuardarUbicacion.Text = "Guardar";
+            this.btnGuardarUbicacion.UseVisualStyleBackColor = false;
+            this.btnGuardarUbicacion.Click += new System.EventHandler(this.btnGuardarUbicacion_Click);
             // 
             // label17
             // 
@@ -66,8 +67,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 83);
-            this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.tbNomUbicacion);
+            this.Controls.Add(this.btnGuardarUbicacion);
             this.Controls.Add(this.label17);
             this.Name = "Ubicacion";
             this.Text = "Ubicacion";
@@ -78,8 +79,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox tbNomUbicacion;
+        private System.Windows.Forms.Button btnGuardarUbicacion;
         private System.Windows.Forms.Label label17;
     }
 }

@@ -16,5 +16,13 @@ namespace SistemaEscolar
         {
             InitializeComponent();
         }
+        CMateriaDBServices LasMaterias = new CMateriaDBServices();
+        private void btnGuardarMateria_Click(object sender, EventArgs e)
+        {
+            CMateria mater = new CMateria();
+            mater.strNomMateria = tbNomMateria.Text;
+            LasMaterias.GuardarNuevaMateria(mater);
+            this.Close();
+        }
     }
 }

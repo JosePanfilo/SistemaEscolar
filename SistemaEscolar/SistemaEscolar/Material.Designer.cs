@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.tbMaterial = new System.Windows.Forms.TextBox();
+            this.btnGuardarMaterial = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox16
+            // tbMaterial
             // 
-            this.textBox16.Location = new System.Drawing.Point(87, 11);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(218, 20);
-            this.textBox16.TabIndex = 7;
+            this.tbMaterial.Location = new System.Drawing.Point(87, 11);
+            this.tbMaterial.Name = "tbMaterial";
+            this.tbMaterial.Size = new System.Drawing.Size(218, 20);
+            this.tbMaterial.TabIndex = 7;
             // 
-            // button6
+            // btnGuardarMaterial
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(12, 43);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(120, 34);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Guardar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnGuardarMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarMaterial.Location = new System.Drawing.Point(12, 43);
+            this.btnGuardarMaterial.Name = "btnGuardarMaterial";
+            this.btnGuardarMaterial.Size = new System.Drawing.Size(120, 34);
+            this.btnGuardarMaterial.TabIndex = 6;
+            this.btnGuardarMaterial.Text = "Guardar";
+            this.btnGuardarMaterial.UseVisualStyleBackColor = true;
+            this.btnGuardarMaterial.Click += new System.EventHandler(this.btnGuardarMaterial_Click);
             // 
             // label15
             // 
@@ -65,8 +66,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(322, 89);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.tbMaterial);
+            this.Controls.Add(this.btnGuardarMaterial);
             this.Controls.Add(this.label15);
             this.Name = "Material";
             this.Text = "Material";
@@ -77,8 +78,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox tbMaterial;
+        private System.Windows.Forms.Button btnGuardarMaterial;
         private System.Windows.Forms.Label label15;
     }
 }

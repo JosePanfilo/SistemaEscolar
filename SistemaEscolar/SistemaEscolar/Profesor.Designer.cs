@@ -32,19 +32,17 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.btnAgregarProfesor = new System.Windows.Forms.Button();
+            this.tbCorreoProfesor = new System.Windows.Forms.TextBox();
+            this.tbApellidoMaterno = new System.Windows.Forms.TextBox();
+            this.tbApellidoPaterno = new System.Windows.Forms.TextBox();
+            this.tbNomProfesor = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.mtbTelProfesor = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -83,58 +81,45 @@
             this.button3.Text = "Examinar";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnAgregarProfesor
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(14, 186);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(122, 62);
-            this.button4.TabIndex = 62;
-            this.button4.Text = "Modificar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnAgregarProfesor.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnAgregarProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarProfesor.Location = new System.Drawing.Point(14, 186);
+            this.btnAgregarProfesor.Name = "btnAgregarProfesor";
+            this.btnAgregarProfesor.Size = new System.Drawing.Size(122, 62);
+            this.btnAgregarProfesor.TabIndex = 62;
+            this.btnAgregarProfesor.Text = "Agregar";
+            this.btnAgregarProfesor.UseVisualStyleBackColor = false;
+            this.btnAgregarProfesor.Click += new System.EventHandler(this.btnAgregarProfesor_Click);
             // 
-            // textBox7
+            // tbCorreoProfesor
             // 
-            this.textBox7.Location = new System.Drawing.Point(168, 148);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(192, 20);
-            this.textBox7.TabIndex = 61;
+            this.tbCorreoProfesor.Location = new System.Drawing.Point(168, 122);
+            this.tbCorreoProfesor.Name = "tbCorreoProfesor";
+            this.tbCorreoProfesor.Size = new System.Drawing.Size(192, 20);
+            this.tbCorreoProfesor.TabIndex = 60;
             // 
-            // textBox8
+            // tbApellidoMaterno
             // 
-            this.textBox8.Location = new System.Drawing.Point(168, 122);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(192, 20);
-            this.textBox8.TabIndex = 60;
+            this.tbApellidoMaterno.Location = new System.Drawing.Point(168, 96);
+            this.tbApellidoMaterno.Name = "tbApellidoMaterno";
+            this.tbApellidoMaterno.Size = new System.Drawing.Size(192, 20);
+            this.tbApellidoMaterno.TabIndex = 59;
             // 
-            // textBox9
+            // tbApellidoPaterno
             // 
-            this.textBox9.Location = new System.Drawing.Point(168, 96);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(192, 20);
-            this.textBox9.TabIndex = 59;
+            this.tbApellidoPaterno.Location = new System.Drawing.Point(168, 70);
+            this.tbApellidoPaterno.Name = "tbApellidoPaterno";
+            this.tbApellidoPaterno.Size = new System.Drawing.Size(192, 20);
+            this.tbApellidoPaterno.TabIndex = 58;
             // 
-            // textBox10
+            // tbNomProfesor
             // 
-            this.textBox10.Location = new System.Drawing.Point(168, 70);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(192, 20);
-            this.textBox10.TabIndex = 58;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(168, 44);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(192, 20);
-            this.textBox11.TabIndex = 57;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(168, 18);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(192, 20);
-            this.textBox12.TabIndex = 56;
+            this.tbNomProfesor.Location = new System.Drawing.Point(168, 44);
+            this.tbNomProfesor.Name = "tbNomProfesor";
+            this.tbNomProfesor.Size = new System.Drawing.Size(192, 20);
+            this.tbNomProfesor.TabIndex = 57;
             // 
             // label7
             // 
@@ -191,16 +176,14 @@
             this.label11.TabIndex = 51;
             this.label11.Text = "Nombre:";
             // 
-            // label12
+            // mtbTelProfesor
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(12, 18);
-            this.label12.Name = "label12";
-            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label12.Size = new System.Drawing.Size(150, 20);
-            this.label12.TabIndex = 50;
-            this.label12.Text = "Numero de  Control:";
+            this.mtbTelProfesor.Location = new System.Drawing.Point(168, 148);
+            this.mtbTelProfesor.Mask = "9999999999";
+            this.mtbTelProfesor.Name = "mtbTelProfesor";
+            this.mtbTelProfesor.Size = new System.Drawing.Size(192, 20);
+            this.mtbTelProfesor.TabIndex = 61;
+            this.mtbTelProfesor.ValidatingType = typeof(int);
             // 
             // Profesor
             // 
@@ -208,20 +191,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(597, 280);
+            this.Controls.Add(this.mtbTelProfesor);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.btnAgregarProfesor);
+            this.Controls.Add(this.tbCorreoProfesor);
+            this.Controls.Add(this.tbApellidoMaterno);
+            this.Controls.Add(this.tbApellidoPaterno);
+            this.Controls.Add(this.tbNomProfesor);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
             this.Name = "Profesor";
             this.Text = "Profesor";
             this.groupBox2.ResumeLayout(false);
@@ -235,18 +216,16 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Button btnAgregarProfesor;
+        private System.Windows.Forms.TextBox tbCorreoProfesor;
+        private System.Windows.Forms.TextBox tbApellidoMaterno;
+        private System.Windows.Forms.TextBox tbApellidoPaterno;
+        private System.Windows.Forms.TextBox tbNomProfesor;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.MaskedTextBox mtbTelProfesor;
     }
 }

@@ -14,6 +14,7 @@ namespace SistemaEscolar
         public string strApellidoMaterno { get; set; }
         public string strCorreo { get; set; }
         public string strTelefono { get; set; }
-        public CGrupo grupo;
+        public int intIDGrupo { get; set; }
+        //public CGrupo grupo;
     }
 }

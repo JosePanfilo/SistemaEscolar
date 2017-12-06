@@ -16,5 +16,13 @@ namespace SistemaEscolar
         {
             InitializeComponent();
         }
+        CUbicacionDBServices LasUbicaciones = new CUbicacionDBServices();
+        private void btnGuardarUbicacion_Click(object sender, EventArgs e)
+        {
+            CUbicacion ubic = new CUbicacion();
+            ubic.strNomUbicacion = tbNomUbicacion.Text;
+            LasUbicaciones.GuardarNuevaUbicacion(ubic);
+            this.Close();
+        }
     }
 }
