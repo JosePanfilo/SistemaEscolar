@@ -73,5 +73,23 @@ namespace SistemaEscolar
             }
             return _listaUMaterias;
         }
+
+        public List<CMateria> ObtenerMateriasSesion(int idgrupo)
+        {
+            List<CMateria> _listaUMaterias = new List<CMateria>();
+            CDBConn db = new CDBConn();
+            SqlCommand cmd = new SqlCommand("SELECT IDMateria, NomMateria FROM Materia where IDMateria in " +
+                "(select IDMateria FROM ImpartirMateria Where IDGrupo = " + idgrupo + ")", db.Conectar);
+            SqlDataReader DReader = cmd.ExecuteReader();
+            while (DReader.Read())
+            {
+                CMateria mater = new CMateria();
+                //Toma los valores desde la bd el cual se asiga el indice de la columna (IDCatrimestre = 0 y Periodo = 1)
+                mater.intIDMateria = DReader.GetInt32(0);
+                mater.strNomMateria = DReader.GetString(1);
+                _listaUMaterias.Add(mater);
+            }
+            return _listaUMaterias;
+        }
     }
 }

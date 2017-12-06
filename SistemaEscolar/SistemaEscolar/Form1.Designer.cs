@@ -55,7 +55,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.cbMaterial = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbMateria = new System.Windows.Forms.ComboBox();
+            this.cbMateriaSesion = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cbTipoSesion = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -293,7 +293,7 @@
             this.metroTabPage1.Controls.Add(this.label7);
             this.metroTabPage1.Controls.Add(this.cbMaterial);
             this.metroTabPage1.Controls.Add(this.label6);
-            this.metroTabPage1.Controls.Add(this.cbMateria);
+            this.metroTabPage1.Controls.Add(this.cbMateriaSesion);
             this.metroTabPage1.Controls.Add(this.label5);
             this.metroTabPage1.Controls.Add(this.cbTipoSesion);
             this.metroTabPage1.Controls.Add(this.label4);
@@ -409,13 +409,13 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Materia:";
             // 
-            // cbMateria
+            // cbMateriaSesion
             // 
-            this.cbMateria.FormattingEnabled = true;
-            this.cbMateria.Location = new System.Drawing.Point(118, 40);
-            this.cbMateria.Name = "cbMateria";
-            this.cbMateria.Size = new System.Drawing.Size(121, 21);
-            this.cbMateria.TabIndex = 9;
+            this.cbMateriaSesion.FormattingEnabled = true;
+            this.cbMateriaSesion.Location = new System.Drawing.Point(118, 40);
+            this.cbMateriaSesion.Name = "cbMateriaSesion";
+            this.cbMateriaSesion.Size = new System.Drawing.Size(121, 21);
+            this.cbMateriaSesion.TabIndex = 9;
             // 
             // label5
             // 
@@ -452,6 +452,7 @@
             this.cbGrupoSesion.Name = "cbGrupoSesion";
             this.cbGrupoSesion.Size = new System.Drawing.Size(92, 21);
             this.cbGrupoSesion.TabIndex = 5;
+            this.cbGrupoSesion.SelectionChangeCommitted += new System.EventHandler(this.cbGrupoSesion_SelectionChangeCommitted);
             // 
             // lbHoraSesion
             // 
@@ -881,7 +882,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbMaterial;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbMateria;
+        private System.Windows.Forms.ComboBox cbMateriaSesion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbTipoSesion;
         private System.Windows.Forms.Label label4;

@@ -173,5 +173,14 @@ namespace SistemaEscolar
         {
 
         }
+
+        private void cbGrupoSesion_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            //Se toma el objeto Profesores y se asignan los valores que va a tener 
+            cbMateriaSesion.DataSource = LasMaterias.ObtenerMateriasSesion(Convert.ToInt32(cbGrupoSesion.SelectedValue));
+            //lo que mostrara y el valor que tomara el CB, debe de estar escrito igual como se encuentra en la CProfesor
+            cbMateriaSesion.DisplayMember = "strNomMateria";// + "strApellidoPaterno" + "strApellidoMaterno";
+            cbMateriaSesion.ValueMember = "intIDMateria";
+        }
     }
 }
