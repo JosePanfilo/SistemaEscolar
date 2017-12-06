@@ -45,7 +45,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnNuevoProfesor = new System.Windows.Forms.Button();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.mdtFechaEntrega = new MetroFramework.Controls.MetroDateTime();
+            this.tbNombreTarea = new System.Windows.Forms.TextBox();
+            this.btnDejarTarea = new System.Windows.Forms.Button();
             this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
             this.dgvListaAlumnosSesion = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
@@ -87,6 +89,8 @@
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.btnNuevaUbicacion = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lbNombreTarea = new System.Windows.Forms.Label();
+            this.lbFechaEntrega = new System.Windows.Forms.Label();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.metroTabPage4.SuspendLayout();
@@ -277,7 +281,11 @@
             // metroTabPage1
             // 
             this.metroTabPage1.BackColor = System.Drawing.SystemColors.Control;
-            this.metroTabPage1.Controls.Add(this.metroPanel1);
+            this.metroTabPage1.Controls.Add(this.lbFechaEntrega);
+            this.metroTabPage1.Controls.Add(this.lbNombreTarea);
+            this.metroTabPage1.Controls.Add(this.mdtFechaEntrega);
+            this.metroTabPage1.Controls.Add(this.tbNombreTarea);
+            this.metroTabPage1.Controls.Add(this.btnDejarTarea);
             this.metroTabPage1.Controls.Add(this.metroCheckBox1);
             this.metroTabPage1.Controls.Add(this.dgvListaAlumnosSesion);
             this.metroTabPage1.Controls.Add(this.label8);
@@ -305,34 +313,52 @@
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
             // 
-            // metroPanel1
+            // mdtFechaEntrega
             // 
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(5, 327);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(733, 167);
-            this.metroPanel1.TabIndex = 18;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
+            this.mdtFechaEntrega.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.mdtFechaEntrega.Location = new System.Drawing.Point(495, 76);
+            this.mdtFechaEntrega.MinimumSize = new System.Drawing.Size(0, 29);
+            this.mdtFechaEntrega.Name = "mdtFechaEntrega";
+            this.mdtFechaEntrega.Size = new System.Drawing.Size(241, 29);
+            this.mdtFechaEntrega.Style = MetroFramework.MetroColorStyle.Green;
+            this.mdtFechaEntrega.TabIndex = 20;
+            this.mdtFechaEntrega.Visible = false;
+            this.mdtFechaEntrega.ValueChanged += new System.EventHandler(this.metroDateTime2_ValueChanged);
+            // 
+            // tbNombreTarea
+            // 
+            this.tbNombreTarea.Location = new System.Drawing.Point(209, 83);
+            this.tbNombreTarea.Name = "tbNombreTarea";
+            this.tbNombreTarea.Size = new System.Drawing.Size(109, 20);
+            this.tbNombreTarea.TabIndex = 19;
+            this.tbNombreTarea.Visible = false;
+            // 
+            // btnDejarTarea
+            // 
+            this.btnDejarTarea.Location = new System.Drawing.Point(7, 71);
+            this.btnDejarTarea.Name = "btnDejarTarea";
+            this.btnDejarTarea.Size = new System.Drawing.Size(121, 28);
+            this.btnDejarTarea.TabIndex = 18;
+            this.btnDejarTarea.Text = "Dejar Tarea";
+            this.btnDejarTarea.UseVisualStyleBackColor = true;
+            this.btnDejarTarea.Click += new System.EventHandler(this.btnDejarTarea_Click);
             // 
             // metroCheckBox1
             // 
             this.metroCheckBox1.AutoSize = true;
-            this.metroCheckBox1.Location = new System.Drawing.Point(8, 80);
+            this.metroCheckBox1.Location = new System.Drawing.Point(8, 105);
             this.metroCheckBox1.Name = "metroCheckBox1";
-            this.metroCheckBox1.Size = new System.Drawing.Size(91, 15);
+            this.metroCheckBox1.Size = new System.Drawing.Size(35, 15);
             this.metroCheckBox1.TabIndex = 17;
-            this.metroCheckBox1.Text = "Recojer tarea";
+            this.metroCheckBox1.Text = "    ";
             this.metroCheckBox1.UseSelectable = true;
+            this.metroCheckBox1.Visible = false;
             this.metroCheckBox1.CheckedChanged += new System.EventHandler(this.metroCheckBox1_CheckedChanged);
             // 
             // dgvListaAlumnosSesion
             // 
             this.dgvListaAlumnosSesion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaAlumnosSesion.Location = new System.Drawing.Point(5, 101);
+            this.dgvListaAlumnosSesion.Location = new System.Drawing.Point(9, 135);
             this.dgvListaAlumnosSesion.Name = "dgvListaAlumnosSesion";
             this.dgvListaAlumnosSesion.Size = new System.Drawing.Size(731, 220);
             this.dgvListaAlumnosSesion.TabIndex = 15;
@@ -752,6 +778,28 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lbNombreTarea
+            // 
+            this.lbNombreTarea.AutoSize = true;
+            this.lbNombreTarea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombreTarea.Location = new System.Drawing.Point(134, 81);
+            this.lbNombreTarea.Name = "lbNombreTarea";
+            this.lbNombreTarea.Size = new System.Drawing.Size(69, 20);
+            this.lbNombreTarea.TabIndex = 21;
+            this.lbNombreTarea.Text = "Nombre:";
+            this.lbNombreTarea.Visible = false;
+            // 
+            // lbFechaEntrega
+            // 
+            this.lbFechaEntrega.AutoSize = true;
+            this.lbFechaEntrega.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFechaEntrega.Location = new System.Drawing.Point(348, 81);
+            this.lbFechaEntrega.Name = "lbFechaEntrega";
+            this.lbFechaEntrega.Size = new System.Drawing.Size(141, 20);
+            this.lbFechaEntrega.TabIndex = 22;
+            this.lbFechaEntrega.Text = "Fecha de Entrega:";
+            this.lbFechaEntrega.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -839,7 +887,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvListaAlumnosSesion;
         private MetroFramework.Controls.MetroCheckBox metroCheckBox1;
-        private MetroFramework.Controls.MetroPanel metroPanel1;
         private System.Windows.Forms.Button btnGuardarAsigMateria;
         private System.Windows.Forms.ComboBox cbGrupoAsigMater;
         private System.Windows.Forms.ComboBox cbMateriaAsignar;
@@ -847,6 +894,11 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnDejarTarea;
+        private MetroFramework.Controls.MetroDateTime mdtFechaEntrega;
+        private System.Windows.Forms.TextBox tbNombreTarea;
+        private System.Windows.Forms.Label lbFechaEntrega;
+        private System.Windows.Forms.Label lbNombreTarea;
     }
 }
 

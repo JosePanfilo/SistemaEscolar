@@ -81,6 +81,7 @@
     <Compile Include="CProfesorDBServices.cs" />
     <Compile Include="CSesion.cs" />
     <Compile Include="CSesionDBServices.cs" />
+    <Compile Include="CTarea.cs" />
     <Compile Include="Cuatrimestre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +108,7 @@
     <Compile Include="Horario.Designer.cs">
       <DependentUpon>Horario.cs</DependentUpon>
     </Compile>
+    <Compile Include="IRecogerTarea.cs" />
     <Compile Include="Materia.cs">
       <SubType>Form</SubType>
     </Compile>

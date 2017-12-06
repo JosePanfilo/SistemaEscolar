@@ -26,6 +26,8 @@ namespace SistemaEscolar
             dgvCuatrimestre.DataSource = LosCuatrimestres.TodosLosCuatrimestres();
         }
 
+        
+
         //PROFESOR
         private void btnHorarioProfesor_Click(object sender, EventArgs e)
         {
@@ -42,6 +44,8 @@ namespace SistemaEscolar
         private void metroCheckBox1_CheckedChanged(object sender, EventArgs e)
         {
             metroCheckBox1.Visible = false;
+            btnDejarTarea.Visible = true;
+
         }
 
         //Abrir ventana o forma para agregar el cuatrimestre
@@ -133,6 +137,41 @@ namespace SistemaEscolar
             impMat.intIDMateria = Convert.ToInt32(cbMateriaAsignar.SelectedValue);
             impMat.intIDGrupo = Convert.ToInt32(cbGrupoAsigMater.SelectedValue);
             ImpartirMaterias.GuardarNuevoImpartirMateria(impMat);
+        }
+
+        CTarea tarea;
+        IRecogerTarea recogertarea;
+        private void btnDejarTarea_Click(object sender, EventArgs e)
+        {
+            recogertarea = (IRecogerTarea)tarea;
+            
+
+            if(btnDejarTarea.Text == "Dejar Tarea")
+            {
+                btnDejarTarea.Visible = true;
+                lbNombreTarea.Visible = true;
+                tbNombreTarea.Visible = true;
+                lbFechaEntrega.Visible = true;
+                mdtFechaEntrega.Visible = true;
+                btnDejarTarea.Text = "Guardar";
+            }
+            else if (btnDejarTarea.Text == "Guardar")
+            {
+                metroCheckBox1.Visible = true;
+                lbNombreTarea.Visible = false;
+                tbNombreTarea.Visible = false;
+                lbFechaEntrega.Visible = false;
+                mdtFechaEntrega.Visible = false;
+
+                metroCheckBox1.Text = tbNombreTarea.Text+" " + mdtFechaEntrega.Text;
+
+                btnDejarTarea.Text = "Dejar Tarea";
+            }
+        }
+
+        private void metroDateTime2_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
