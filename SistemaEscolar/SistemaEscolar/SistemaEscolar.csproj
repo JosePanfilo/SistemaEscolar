@@ -69,6 +69,7 @@
     <Compile Include="CDBConn.cs" />
     <Compile Include="CGrupo.cs" />
     <Compile Include="CGrupoDBServices.cs" />
+    <Compile Include="CGrupoSesionSelec.cs" />
     <Compile Include="CHorario.cs" />
     <Compile Include="CHorarioDBServices.cs" />
     <Compile Include="CImpartirMateria.cs" />
@@ -108,6 +109,8 @@
     <Compile Include="Horario.Designer.cs">
       <DependentUpon>Horario.cs</DependentUpon>
     </Compile>
+    <Compile Include="IObservador.cs" />
+    <Compile Include="ISujeto.cs" />
     <Compile Include="IRecogerTarea.cs" />
     <Compile Include="Materia.cs">
       <SubType>Form</SubType>

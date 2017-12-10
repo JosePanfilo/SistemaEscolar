@@ -45,6 +45,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnNuevoProfesor = new System.Windows.Forms.Button();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.lbFechaEntrega = new System.Windows.Forms.Label();
+            this.lbNombreTarea = new System.Windows.Forms.Label();
             this.mdtFechaEntrega = new MetroFramework.Controls.MetroDateTime();
             this.tbNombreTarea = new System.Windows.Forms.TextBox();
             this.btnDejarTarea = new System.Windows.Forms.Button();
@@ -89,8 +91,6 @@
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.btnNuevaUbicacion = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lbNombreTarea = new System.Windows.Forms.Label();
-            this.lbFechaEntrega = new System.Windows.Forms.Label();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.metroTabPage4.SuspendLayout();
@@ -313,6 +313,28 @@
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
             // 
+            // lbFechaEntrega
+            // 
+            this.lbFechaEntrega.AutoSize = true;
+            this.lbFechaEntrega.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFechaEntrega.Location = new System.Drawing.Point(348, 81);
+            this.lbFechaEntrega.Name = "lbFechaEntrega";
+            this.lbFechaEntrega.Size = new System.Drawing.Size(141, 20);
+            this.lbFechaEntrega.TabIndex = 22;
+            this.lbFechaEntrega.Text = "Fecha de Entrega:";
+            this.lbFechaEntrega.Visible = false;
+            // 
+            // lbNombreTarea
+            // 
+            this.lbNombreTarea.AutoSize = true;
+            this.lbNombreTarea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombreTarea.Location = new System.Drawing.Point(134, 81);
+            this.lbNombreTarea.Name = "lbNombreTarea";
+            this.lbNombreTarea.Size = new System.Drawing.Size(69, 20);
+            this.lbNombreTarea.TabIndex = 21;
+            this.lbNombreTarea.Text = "Nombre:";
+            this.lbNombreTarea.Visible = false;
+            // 
             // mdtFechaEntrega
             // 
             this.mdtFechaEntrega.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -452,6 +474,7 @@
             this.cbGrupoSesion.Name = "cbGrupoSesion";
             this.cbGrupoSesion.Size = new System.Drawing.Size(92, 21);
             this.cbGrupoSesion.TabIndex = 5;
+            this.cbGrupoSesion.SelectedIndexChanged += new System.EventHandler(this.cbGrupoSesion_SelectedIndexChanged);
             this.cbGrupoSesion.SelectionChangeCommitted += new System.EventHandler(this.cbGrupoSesion_SelectionChangeCommitted);
             // 
             // lbHoraSesion
@@ -778,28 +801,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lbNombreTarea
-            // 
-            this.lbNombreTarea.AutoSize = true;
-            this.lbNombreTarea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombreTarea.Location = new System.Drawing.Point(134, 81);
-            this.lbNombreTarea.Name = "lbNombreTarea";
-            this.lbNombreTarea.Size = new System.Drawing.Size(69, 20);
-            this.lbNombreTarea.TabIndex = 21;
-            this.lbNombreTarea.Text = "Nombre:";
-            this.lbNombreTarea.Visible = false;
-            // 
-            // lbFechaEntrega
-            // 
-            this.lbFechaEntrega.AutoSize = true;
-            this.lbFechaEntrega.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFechaEntrega.Location = new System.Drawing.Point(348, 81);
-            this.lbFechaEntrega.Name = "lbFechaEntrega";
-            this.lbFechaEntrega.Size = new System.Drawing.Size(141, 20);
-            this.lbFechaEntrega.TabIndex = 22;
-            this.lbFechaEntrega.Text = "Fecha de Entrega:";
-            this.lbFechaEntrega.Visible = false;
             // 
             // Form1
             // 

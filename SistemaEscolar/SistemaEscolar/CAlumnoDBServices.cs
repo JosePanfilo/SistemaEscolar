@@ -11,10 +11,10 @@ namespace SistemaEscolar
     {
         List<CAlumno> _Alumno = new List<CAlumno>();
 
-        public List<CAlumno> TodosLosAlumnos()
+        public List<CAlumno> TodosLosAlumnos(int idgrupo)
         {
             CDBConn db = new CDBConn();
-            SqlCommand cmd = new SqlCommand("Select * from Alumno", db.Conectar);
+            SqlCommand cmd = new SqlCommand("Select * from Alumno Where IDGrupo = " + idgrupo, db.Conectar);
             cmd.CommandType = System.Data.CommandType.Text;
             SqlDataReader DReader = cmd.ExecuteReader();
 

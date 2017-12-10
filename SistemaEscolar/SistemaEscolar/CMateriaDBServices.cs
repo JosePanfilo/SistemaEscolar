@@ -74,22 +74,43 @@ namespace SistemaEscolar
             return _listaUMaterias;
         }
 
-        public List<CMateria> ObtenerMateriasSesion(int idgrupo)
+
+        public List<CMateria> ObtenerMateriasSesion(int id)
         {
+            //Actualizar(id);
             List<CMateria> _listaUMaterias = new List<CMateria>();
             CDBConn db = new CDBConn();
             SqlCommand cmd = new SqlCommand("SELECT IDMateria, NomMateria FROM Materia where IDMateria in " +
-                "(select IDMateria FROM ImpartirMateria Where IDGrupo = " + idgrupo + ")", db.Conectar);
+                "(select IDMateria FROM ImpartirMateria Where IDGrupo = " + id + ")", db.Conectar);
             SqlDataReader DReader = cmd.ExecuteReader();
             while (DReader.Read())
             {
                 CMateria mater = new CMateria();
-                //Toma los valores desde la bd el cual se asiga el indice de la columna (IDCatrimestre = 0 y Periodo = 1)
-                mater.intIDMateria = DReader.GetInt32(0);
+                //Toma los valores desde la bd el cual se asiga el indice de la columna(IDCatrimestre = 0 y Periodo = 1)
+            mater.intIDMateria = DReader.GetInt32(0);
                 mater.strNomMateria = DReader.GetString(1);
                 _listaUMaterias.Add(mater);
             }
             return _listaUMaterias;
         }
+
+        //public void Actualizar(int id)
+        //{
+        //    //Accion que se realiza despues que se entera que el CBGrupoSesion se selcciono
+        //    List<CMateria> _listaUMaterias = new List<CMateria>();
+        //    CDBConn db = new CDBConn();
+        //    SqlCommand cmd = new SqlCommand("SELECT IDMateria, NomMateria FROM Materia where IDMateria in " +
+        //        "(select IDMateria FROM ImpartirMateria Where IDGrupo = " + id + ")", db.Conectar);
+        //    SqlDataReader DReader = cmd.ExecuteReader();
+        //    while (DReader.Read())
+        //    {
+        //        CMateria mater = new CMateria();
+        //        //Toma los valores desde la bd el cual se asiga el indice de la columna (IDCatrimestre = 0 y Periodo = 1)
+        //        mater.intIDMateria = DReader.GetInt32(0);
+        //        mater.strNomMateria = DReader.GetString(1);
+        //        _listaUMaterias.Add(mater);
+        //    }
+        //    //return _listaUMaterias;
+        //}
     }
 }

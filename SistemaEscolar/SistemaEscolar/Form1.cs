@@ -12,6 +12,7 @@ namespace SistemaEscolar
 {
     public partial class Form1 : Form
     {
+        CAlumnoDBServices LosAlumnos = new CAlumnoDBServices();
         CCuatrimestreDBServices LosCuatrimestres = new CCuatrimestreDBServices();
         CUbicacionDBServices LasUbicaciones = new CUbicacionDBServices();
         CMaterialDBServices LosMateriales = new CMaterialDBServices();
@@ -19,6 +20,8 @@ namespace SistemaEscolar
         CProfesorDBServices LosProfesores = new CProfesorDBServices();
         CGrupoDBServices LosGrupos = new CGrupoDBServices();
         CImpartirMateriaDBServices ImpartirMaterias = new CImpartirMateriaDBServices();
+
+        CGrupoSesionSelec sensor = new CGrupoSesionSelec();
         public Form1()
         {
             InitializeComponent();
@@ -128,6 +131,13 @@ namespace SistemaEscolar
             //lo que mostrara y el valor que tomara el CB, debe de estar escrito igual como se encuentra en la CProfesor
             cbGrupoSesion.DisplayMember = "strNomGrupo";// + "strApellidoPaterno" + "strApellidoMaterno";
             cbGrupoSesion.ValueMember = "intIDGrupo";
+
+
+            //Se toma el objeto Profesores y se asignan los valores que va a tener 
+            cbMateriaSesion.DataSource = LasMaterias.ObtenerMateriasSesion(Convert.ToInt32(cbGrupoSesion.SelectedValue));
+            //lo que mostrara y el valor que tomara el CB, debe de estar escrito igual como se encuentra en la CProfesor
+            cbMateriaSesion.DisplayMember = "strNomMateria";// + "strApellidoPaterno" + "strApellidoMaterno";
+            cbMateriaSesion.ValueMember = "intIDMateria";
         }
 
         private void btnGuardarAsigMateria_Click(object sender, EventArgs e)
@@ -176,11 +186,17 @@ namespace SistemaEscolar
 
         private void cbGrupoSesion_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            //Se toma el objeto Profesores y se asignan los valores que va a tener 
-            cbMateriaSesion.DataSource = LasMaterias.ObtenerMateriasSesion(Convert.ToInt32(cbGrupoSesion.SelectedValue));
-            //lo que mostrara y el valor que tomara el CB, debe de estar escrito igual como se encuentra en la CProfesor
-            cbMateriaSesion.DisplayMember = "strNomMateria";// + "strApellidoPaterno" + "strApellidoMaterno";
-            cbMateriaSesion.ValueMember = "intIDMateria";
+            ////Se toma el objeto Profesores y se asignan los valores que va a tener 
+            //cbMateriaSesion.DataSource = LasMaterias.ObtenerMateriasSesion(Convert.ToInt32(cbGrupoSesion.SelectedValue));
+            ////lo que mostrara y el valor que tomara el CB, debe de estar escrito igual como se encuentra en la CProfesor
+            //cbMateriaSesion.DisplayMember = "strNomMateria";// + "strApellidoPaterno" + "strApellidoMaterno";
+            //cbMateriaSesion.ValueMember = "intIDMateria";
+        }
+
+        private void cbGrupoSesion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //sensor.GrupoSeleccionado(Convert.ToInt32(cbGrupoSesion.SelectedValue));
+            dgvListaAlumnosSesion.DataSource = LosAlumnos.TodosLosAlumnos(1);
         }
     }
 }
